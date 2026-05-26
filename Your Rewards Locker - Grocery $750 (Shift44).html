@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
-  <title>Your Rewards Locker</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2300A859'/%3E%3Cpath d='M20 28h24v22H20zM20 22h24v6H20z' fill='%23fff'/%3E%3Cpath d='M32 22v28' stroke='%23F8B500' stroke-width='3'/%3E%3Cpath d='M26 22c0-4 6-4 6 0 0-4 6-4 6 0' stroke='%23F8B500' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+  <title>Your Rewards Locker — $750 Grocery Gift Card</title>
+  <link rel="icon" type="image/png" href="locker_favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -34,12 +34,13 @@
     }
 
     .rise-1 { animation-delay: 0.05s; }
-    .rise-2 { animation-delay: 0.18s; }
-    .rise-3 { animation-delay: 0.30s; }
-    .rise-4 { animation-delay: 0.42s; }
-    .rise-5 { animation-delay: 0.54s; }
-    .rise-6 { animation-delay: 0.66s; }
-    .rise-7 { animation-delay: 0.78s; }
+    .rise-2 { animation-delay: 0.16s; }
+    .rise-3 { animation-delay: 0.26s; }
+    .rise-4 { animation-delay: 0.36s; }
+    .rise-5 { animation-delay: 0.46s; }
+    .rise-6 { animation-delay: 0.56s; }
+    .rise-7 { animation-delay: 0.66s; }
+    .rise-8 { animation-delay: 0.76s; }
 
     @media (prefers-reduced-motion: reduce) {
       .rise { opacity: 1; animation: none; transform: none; }
@@ -57,7 +58,7 @@
       border-radius: 999px;
       font-size: 13px;
       font-weight: 700;
-      margin: 0 auto 22px;
+      margin: 0 auto 16px;
       letter-spacing: 0.6px;
       text-transform: uppercase;
       line-height: 1;
@@ -93,101 +94,129 @@
 
     /* ── Focus styles (keyboard nav) ── */
     a:focus-visible, button:focus-visible {
-      outline: 3px solid #6ea8fe;
+      outline: 3px solid #5BC247;
       outline-offset: 3px;
       border-radius: 4px;
     }
 
     /* ── Header ── */
     .header {
-      background: #00A859;
+      background: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      padding: 16px 0;
+      padding: 14px 16px;
       flex-shrink: 0;
+      box-shadow: 0 2px 0 0 #1F7F2E;
     }
 
-    .header .logo-mark {
-      width: 38px;
-      height: 38px;
-      flex-shrink: 0;
-    }
-
-    .header .logo-text {
-      color: #fff;
-      font-weight: 800;
-      font-size: 19px;
-      letter-spacing: 0.4px;
+    .header .brand-logo {
+      display: block;
+      height: 44px;
+      width: auto;
+      max-width: 100%;
     }
 
     /* ── Main ── */
     .main {
-      background: #111;
+      background: #0d1812;
       flex: 1;
       display: flex;
       align-items: flex-start;
       justify-content: center;
       padding: 15px 16px 60px;
+      background-image:
+        radial-gradient(1200px 600px at 50% -200px, rgba(31,127,46,0.45), transparent 60%),
+        radial-gradient(800px 400px at 100% 100%, rgba(91,194,71,0.18), transparent 60%);
     }
 
     /* ── Card ── */
     .card {
-      background: #1e2433;
-      border-radius: 14px;
+      background: #142a1c;
+      border-radius: 20px;
       width: 100%;
       max-width: 480px;
       padding: 28px 24px 32px;
       text-align: center;
+      box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+        0 1px 2px rgba(0, 0, 0, 0.2),
+        0 30px 60px rgba(0, 0, 0, 0.45);
     }
 
-    /* Progress bar — thicker for visibility */
-    .progress-track {
-      height: 10px;
-      background: #3a3f4d;
-      border-radius: 5px;
-      overflow: hidden;
-      margin-bottom: 24px;
-    }
-
-    .progress-fill {
-      height: 100%;
-      width: 0%;
-      background: #4cd964;
-      border-radius: 5px;
-      animation: fillBar 1.8s ease-out 0.3s forwards;
-    }
-
-    @keyframes fillBar { to { width: 72%; } }
-
-    /* Respect reduced-motion preference */
-    @media (prefers-reduced-motion: reduce) {
-      .progress-fill {
-        animation: none;
-        width: 72%;
-      }
+    .eyebrow {
+      display: inline-block;
+      background: rgba(91, 194, 71, 0.15);
+      color: #A6E29A;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      border: 1px solid rgba(91, 194, 71, 0.35);
     }
 
     .card h1 {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 10px;
-      line-height: 1.35;
-    }
-
-    .card .subhead {
-      font-size: 17px;
-      font-weight: 600;
-      color: #d8dde8;
-      margin: 0 auto 22px;
-      max-width: 360px;
-      line-height: 1.4;
-    }
-
-    .card .subhead .amount {
-      color: #4cd964;
+      font-size: 30px;
       font-weight: 800;
+      margin-bottom: 8px;
+      line-height: 1.2;
+      letter-spacing: -0.4px;
+      text-wrap: balance;
+    }
+
+    .subhead {
+      font-size: 17px;
+      color: #c0c5d0;
+      margin-bottom: 18px;
+      line-height: 1.45;
+      text-wrap: pretty;
+    }
+
+    .subhead strong { color: #fff; }
+    .subhead .amount { color: #5BC247; font-weight: 800; }
+
+    /* Gift card visual */
+    .gc {
+      display: block;
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      margin: 16px auto 18px;
+      border-radius: 16px;
+      outline: 1px solid rgba(255, 255, 255, 0.08);
+      outline-offset: -1px;
+      box-shadow:
+        0 18px 36px rgba(0, 0, 0, 0.55),
+        0 4px 10px rgba(0, 0, 0, 0.35);
+      transform-origin: center;
+      animation: gc-wobble 5.5s ease-in-out infinite;
+      will-change: transform;
+    }
+
+    /* When the gift card also rises, run rise first, then wobble */
+    .gc.rise {
+      animation:
+        rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+        gc-wobble 5.5s ease-in-out 0.6s infinite;
+    }
+
+    @keyframes gc-wobble {
+      0%, 100% { transform: rotate(0deg); }
+      25%      { transform: rotate(-3.5deg); }
+      75%      { transform: rotate(3.5deg); }
+    }
+
+    /* Subtle hover lift on the gift card (desktop only) */
+    @media (hover: hover) and (pointer: fine) {
+      .gc { transition: transform 0.3s ease; }
+      .gc:hover { animation-play-state: paused; transform: rotate(0deg) scale(1.03); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gc { animation: none; }
     }
 
     /* CTA Button — large tap target (min 48px height) */
@@ -195,30 +224,33 @@
       display: inline-block;
       background: linear-gradient(
         90deg,
-        #4cd964 0%,
-        #3cc455 20%,
-        #1fb46e 40%,
-        #18a87c 50%,
-        #1fb46e 60%,
-        #3cc455 80%,
-        #4cd964 100%
+        #FFB400 0%,
+        #FF8A00 25%,
+        #FF6900 50%,
+        #FF8A00 75%,
+        #FFB400 100%
       );
       background-size: 200% 100%;
       background-position: 200% 50%;
       color: #fff;
-      font-size: 22px;
-      font-weight: 700;
+      font-size: 17px;
+      font-weight: 800;
       text-decoration: none;
-      padding: 18px 54px;
+      padding: 16px 20px;
       border-radius: 34px;
       transition: filter 0.2s, transform 0.15s, box-shadow 0.2s;
       margin-bottom: 14px;
       min-height: 48px;
-      box-shadow: 0 6px 18px rgba(31, 180, 110, 0.35);
+      box-shadow: 0 8px 22px rgba(255, 105, 0, 0.45);
       animation: cta-gradient 4.5s linear infinite;
+      letter-spacing: 0.2px;
+      width: 100%;
+      max-width: 360px;
+      text-transform: uppercase;
+      white-space: nowrap;
     }
 
-    .cta:hover { filter: brightness(1.08); box-shadow: 0 8px 22px rgba(31, 180, 110, 0.5); }
+    .cta:hover { filter: brightness(1.08); box-shadow: 0 10px 28px rgba(255, 105, 0, 0.6); }
     .cta:active { transform: scale(0.97); }
 
     @keyframes cta-gradient {
@@ -237,33 +269,10 @@
       .cta, .cta.rise { animation: none; }
     }
 
-    /* Card icons */
-    .card-icons {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-
-    .card-icons svg {
-      width: 42px;
-      height: 27px;
-      border-radius: 4px;
-      overflow: hidden;
-    }
-
-    .context-line {
-      font-size: 17px;
-      color: #c0c5d0;
-      margin-bottom: 22px;
-      line-height: 1.45;
-    }
-
     .social-proof {
       font-size: 14px;
       color: #a8b0c0;
-      margin-bottom: 20px;
+      margin-bottom: 14px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -298,6 +307,59 @@
       .pulse-dot { animation: none; }
     }
 
+    /* Star rating */
+    .rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: #c8cfdd;
+      margin-bottom: 18px;
+      font-variant-numeric: tabular-nums;
+    }
+    .stars { color: #5BC247; letter-spacing: 1px; font-size: 14px; }
+    .rating strong { color: #e6ebf5; font-weight: 700; }
+
+    /* Benefits row */
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin: 4px 0 20px;
+    }
+    .benefit {
+      background: rgba(255,255,255,0.03);
+      box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+        0 1px 2px rgba(0, 0, 0, 0.18);
+      border-radius: 12px;
+      padding: 10px 6px;
+      font-size: 12px;
+      color: #c8cfdd;
+      line-height: 1.3;
+      font-weight: 600;
+      transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+                  box-shadow 220ms ease;
+    }
+    .benefit:hover {
+      transform: translateY(-1px);
+      box-shadow:
+        inset 0 0 0 1px rgba(91, 194, 71, 0.25),
+        0 6px 14px rgba(0, 0, 0, 0.25);
+    }
+    .benefit svg {
+      width: 18px;
+      height: 18px;
+      display: block;
+      margin: 0 auto 6px;
+      transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+                  filter 260ms ease;
+    }
+    .benefit:hover svg {
+      transform: scale(1.12);
+      filter: drop-shadow(0 2px 6px rgba(91, 194, 71, 0.35));
+    }
+
     .confetti-canvas {
       position: fixed;
       inset: 0;
@@ -305,50 +367,14 @@
       z-index: 50;
     }
 
-    /* Grocery gift card hero */
-    .gc-hero {
-      display: block;
-      position: relative;
-      z-index: 3;
-      width: 100%;
-      max-width: 240px;
-      margin: 0 auto 18px;
-      filter: drop-shadow(0 18px 36px rgba(0, 0, 0, 0.55)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
-      transform-origin: center;
-      animation: gc-wobble 5.5s ease-in-out infinite;
-      will-change: transform;
-    }
-
-    /* When the gift card also rises, run rise first, then wobble */
-    .gc-hero.rise {
-      animation:
-        rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards,
-        gc-wobble 5.5s ease-in-out 0.6s infinite;
-    }
-
-    @keyframes gc-wobble {
-      0%, 100% { transform: rotate(0deg); }
-      25%      { transform: rotate(-3.5deg); }
-      75%      { transform: rotate(3.5deg); }
-    }
-
-    /* Subtle hover lift on the gift card (desktop only) */
-    @media (hover: hover) and (pointer: fine) {
-      .gc-hero { transition: transform 0.3s ease; }
-      .gc-hero:hover { animation-play-state: paused; transform: rotate(0deg) scale(1.03); }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .gc-hero { animation: none; }
-    }
-
     .secure-text {
-      font-size: 15px;
+      font-size: 14px;
       color: #b0b5c4;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 6px;
+      margin-top: 4px;
     }
 
     .secure-text svg {
@@ -356,9 +382,18 @@
       height: 16px;
       flex-shrink: 0;
     }
+
+    .fine-print {
+      font-size: 13px;
+      color: #a0a5b4;
+      margin-top: 14px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
     /* ── Footer ── */
     .footer {
-      background: #111;
+      background: #0d1812;
       padding: 24px 16px 30px;
       text-align: center;
       flex-shrink: 0;
@@ -395,7 +430,7 @@
     .footer-disclosure {
       font-size: 13px;
       color: #aaa;
-      max-width: 520px;
+      max-width: 560px;
       margin: 0 auto;
       line-height: 1.55;
       text-wrap: pretty;
@@ -405,33 +440,31 @@
     @media (min-width: 600px) {
       .main { padding-top: 32px; }
 
-
       .card {
         padding: 36px 40px 40px;
       }
 
       .card h1 {
-        font-size: 34px;
+        font-size: 36px;
       }
 
-      .card .subhead {
+      .subhead {
         font-size: 18px;
       }
 
-      .context-line {
-        font-size: 18px;
+      .cta {
+        font-size: 20px;
+        padding: 18px 32px;
+        letter-spacing: 0.4px;
+      }
+
+      .gc {
+        max-width: 320px;
       }
 
       .footer-links {
         gap: 14px 40px;
       }
-    }
-      .fine-print {
-      font-size: 13px;
-      color: #a0a5b4;
-      margin-top: 14px;
-      line-height: 1.5;
-      text-align: center;
     }
   </style>
 </head>
@@ -439,13 +472,7 @@
 
   <!-- Header -->
   <header class="header">
-    <svg class="logo-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="6" y="22" width="52" height="36" rx="4" fill="#ffffff"/>
-      <rect x="6" y="22" width="52" height="8" fill="#F8B500"/>
-      <rect x="29" y="22" width="6" height="36" fill="#F8B500"/>
-      <path d="M22 22c0-6 10-6 10 0 0-6 10-6 10 0" stroke="#F8B500" stroke-width="3" fill="none" stroke-linecap="round"/>
-    </svg>
-    <span class="logo-text">Your Rewards Locker</span>
+    <img class="brand-logo" src="locker_logo.png" alt="Your Rewards Locker" width="1315" height="303" fetchpriority="high" decoding="async">
   </header>
 
   <!-- Main -->
@@ -457,81 +484,51 @@
         <span class="countdown-time" id="countdown-time">01:00</span>
       </p>
 
-      <svg class="gc-hero rise rise-1" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="$750 Grocery Gift Card">
-        <defs>
-          <linearGradient id="cardBg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#00A859"/>
-            <stop offset="100%" stop-color="#007a40"/>
-          </linearGradient>
-          <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="rgba(255,255,255,0.25)"/>
-            <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
-          </linearGradient>
-        </defs>
-        <rect x="4" y="4" width="312" height="192" rx="18" fill="url(#cardBg)"/>
-        <rect x="4" y="4" width="312" height="80" rx="18" fill="url(#shine)"/>
-        <!-- Stripe -->
-        <rect x="20" y="148" width="280" height="20" rx="4" fill="rgba(0,0,0,0.35)"/>
-        <!-- Cart icon -->
-        <g transform="translate(28,28)">
-          <path d="M2 6h6l6 22h28l6-16H14" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="20" cy="40" r="3.5" fill="#fff"/>
-          <circle cx="38" cy="40" r="3.5" fill="#fff"/>
-        </g>
-        <!-- Amount -->
-        <text x="160" y="115" text-anchor="middle" font-family="Inter, sans-serif" font-size="58" font-weight="800" fill="#ffffff">$750</text>
-        <text x="160" y="138" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#ffffff" letter-spacing="3">GROCERY GIFT CARD</text>
-      </svg>
+      <span class="eyebrow rise rise-1">Limited-Time Offer</span>
 
       <h1 class="rise rise-2">You've Won!</h1>
       <p class="subhead rise rise-3">Claim your entry for your chance to redeem a <span class="amount">$750 Grocery Gift Card!</span></p>
 
-      <a class="cta rise rise-4" id="lp-pom-button-161" href="https://www.udt6zz3c.com/cmp/22CSPB1/2JL8K8/?sub1=null&sub2=ae&sub3=null&sub5=null&sub10=null&sub4=null" target="_blank" rel="noopener">Claim Reward</a>
+      <img class="gc rise rise-4" src="giftcards_aldi.png" alt="$750 grocery gift card" width="1498" height="1050" fetchpriority="high" decoding="async">
 
-      <p class="social-proof rise rise-5" aria-live="polite">
+      <a class="cta rise rise-5" id="lp-pom-button-161" href="https://www.udt6zz3c.com/cmp/22CSPB1/2JL8K8/?sub1=null&sub2=ae&sub3=null&sub5=null&sub10=null&sub4=null" target="_blank" rel="noopener">Claim My Reward Now</a>
+
+      <p class="social-proof rise rise-6" aria-live="polite">
         <span class="pulse-dot" aria-hidden="true"></span>
         <span><strong id="redeem-count">—</strong> people redeemed today</span>
       </p>
 
-      <div class="card-icons rise rise-6" aria-label="Accepted at major grocery retailers">
-        <!-- Cart -->
-        <svg viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="64" height="40" rx="6" fill="#0f1727"/>
-          <path d="M10 12h8l6 16h22l4-12H22" stroke="#4cd964" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="26" cy="33" r="2.2" fill="#4cd964"/>
-          <circle cx="42" cy="33" r="2.2" fill="#4cd964"/>
-        </svg>
-        <!-- Bag -->
-        <svg viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="64" height="40" rx="6" fill="#0f1727"/>
-          <path d="M18 14h28l-3 20H21z" stroke="#4cd964" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
-          <path d="M25 14c0-6 14-6 14 0" stroke="#4cd964" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        </svg>
-        <!-- Receipt -->
-        <svg viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="64" height="40" rx="6" fill="#0f1727"/>
-          <path d="M22 8h20v26l-4-3-4 3-4-3-4 3-4-3z" stroke="#4cd964" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
-          <path d="M26 16h12M26 22h12" stroke="#4cd964" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        <!-- Card -->
-        <svg viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="64" height="40" rx="6" fill="#0f1727"/>
-          <rect x="10" y="12" width="44" height="20" rx="3" stroke="#4cd964" stroke-width="2.2" fill="none"/>
-          <rect x="10" y="17" width="44" height="3" fill="#4cd964"/>
-        </svg>
+      <p class="rating rise rise-6">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span><strong>4.8/5</strong> from 12,400+ shoppers</span>
+      </p>
+
+      <div class="benefits rise rise-7">
+        <div class="benefit">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 12l4 4L19 6" stroke="#4cd964" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          100% Free
+        </div>
+        <div class="benefit">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" fill="#5BC247"/></svg>
+          Instant Entry
+        </div>
+        <div class="benefit">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z" fill="#1F7F2E"/></svg>
+          Top-Rated
+        </div>
       </div>
 
-      <p class="secure-text rise rise-7">
+      <p class="secure-text rise rise-8">
         <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 1C5.34 1 4 2.34 4 4v2H3a1 1 0 00-1 1v5a1 1 0 001 1h8a1 1 0 001-1V7a1 1 0 00-1-1h-1V4c0-1.66-1.34-3-3-3zm-1.5 3c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v2h-3V4z" fill="#b0b5c4"/></svg>
         Securely processed
       </p>
-      <p class="fine-print rise rise-7">No purchase necessary.</p>
+      <p class="fine-print rise rise-8">No purchase necessary.</p>
     </div>
   </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <nav class="footer-links">
+    <nav class="footer-links" aria-label="Footer">
       <a href="https://info.thecashmint.com/terms-conditions/" target="_blank" rel="noopener">Terms &amp; Conditions</a>
       <a href="https://info.thecashmint.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>
       <a href="https://info.thecashmint.com/ccpa/" target="_blank" rel="noopener">CCPA</a>
@@ -565,17 +562,16 @@
     })();
 
     // Social-proof count — monotonically increases on each page load.
-    // Stored in localStorage so the number only ever goes up (min +10 per refresh).
     (function () {
       var el = document.getElementById('redeem-count');
       if (!el) return;
-      var KEY = 'redeem_count_v1';
+      var KEY = 'redeem_count_locker_grocery_v1';
       var stored = parseInt(localStorage.getItem(KEY), 10);
       var next;
       if (Number.isFinite(stored) && stored > 0) {
-        next = stored + 10 + Math.floor(Math.random() * 21); // +10 to +30
+        next = stored + 10 + Math.floor(Math.random() * 21);
       } else {
-        next = 1247 + Math.floor(Math.random() * 80); // first-load seed
+        next = 1247 + Math.floor(Math.random() * 80);
       }
       try { localStorage.setItem(KEY, String(next)); } catch (e) {}
       el.textContent = next.toLocaleString();
@@ -601,7 +597,7 @@
       resize();
       window.addEventListener('resize', resize);
 
-      var colors = ['#4cd964', '#1fb46e', '#ffd24c', '#5ab9ff', '#ffffff', '#ff7ec1'];
+      var colors = ['#1F7F2E', '#5BC247', '#7DD267', '#A6E29A', '#ffffff', '#4cd964'];
       var COUNT = 55;
       var DURATION = 3800;
 
@@ -626,7 +622,7 @@
       function tick(now) {
         var t = now - start;
         var life = Math.max(0, 1 - t / DURATION);
-        var alpha = Math.min(1, life * 1.8); // hold full opacity, fade only near end
+        var alpha = Math.min(1, life * 1.8);
         ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
         for (var i = 0; i < particles.length; i++) {
           var p = particles[i];
