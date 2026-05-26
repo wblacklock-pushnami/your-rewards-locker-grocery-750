@@ -478,12 +478,6 @@
   <!-- Main -->
   <main class="main">
     <div class="card">
-      <p class="countdown rise" aria-live="polite">
-        <span class="countdown-dot" aria-hidden="true"></span>
-        <span>Time running out</span>
-        <span class="countdown-time" id="countdown-time">01:00</span>
-      </p>
-
       <span class="eyebrow rise rise-1">Limited-Time Offer</span>
 
       <h1 class="rise rise-2">You've Won!</h1>
@@ -541,26 +535,6 @@
   <canvas id="confetti" class="confetti-canvas" aria-hidden="true"></canvas>
 
   <script>
-    // Countdown timer — counts down from 1:00, loops back when it hits 0.
-    (function () {
-      var el = document.getElementById('countdown-time');
-      if (!el) return;
-      var START = 60;
-      var seconds = START;
-      function render() {
-        var m = Math.floor(seconds / 60);
-        var s = seconds % 60;
-        el.textContent =
-          (m < 10 ? '0' + m : m) + ':' +
-          (s < 10 ? '0' + s : s);
-      }
-      render();
-      setInterval(function () {
-        seconds = seconds > 0 ? seconds - 1 : START;
-        render();
-      }, 1000);
-    })();
-
     // Social-proof count — monotonically increases on each page load.
     (function () {
       var el = document.getElementById('redeem-count');
